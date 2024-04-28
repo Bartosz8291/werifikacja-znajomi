@@ -1,0 +1,17 @@
+<?php
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve the submitted Discord ID and server ID
+    $discord_id = $_POST["discord_id"];
+    $server_id = $_POST["server_id"];
+    
+    // Perform verification logic here (e.g., check if the Discord ID is valid for the specified server)
+    
+    // Display a confirmation message
+    echo "<p>Twoje Discord ID ($discord_id) zostało przesłane do weryfikacji dla serwera o ID: $server_id.</p>";
+} else {
+    // If the form is not submitted, redirect back to the form page
+    header("Location: /form_page.html");
+    exit();
+}
+?>
